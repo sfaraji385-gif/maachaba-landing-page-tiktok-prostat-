@@ -2,8 +2,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    ttq?: { track: (event: string) => void };
+  }
+}
 
 export default function ThankYou() {
+  // Fire TikTok Pixel conversion event
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.ttq) {
+      window.ttq.track("CompleteRegistration");
+    }
+  }, []);
   return (
     <div className="flex flex-col min-h-screen bg-gray-50 text-gray-900 overflow-x-hidden">
       {/* Header */}
