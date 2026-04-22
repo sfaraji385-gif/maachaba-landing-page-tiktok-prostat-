@@ -1,16 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useState, useEffect, FormEvent } from "react";
 
 export default function Home() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     city: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
 
   useEffect(() => {
@@ -30,29 +31,21 @@ export default function Home() {
     document.getElementById("order-form")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
+    // Fire the request to Google Sheets (no need to wait)
+    fetch(
+      `https://script.google.com/macros/s/AKfycbw4r6M8JwNrIp1HtvPlanU6Hzb4p5R66GH-_PuuqCeuJsOS8pfQJWRNVIGoiDc98I_etA/exec?name=${encodeURIComponent(formData.name)}&phone=${encodeURIComponent(formData.phone)}&city=${encodeURIComponent(formData.city)}`,
+      {
+        method: "POST",
+        mode: "no-cors"
+      }
+    ).catch((error) => console.error("Error submitting form", error));
 
-
-      await fetch(
-        `https://script.google.com/macros/s/AKfycbw4r6M8JwNrIp1HtvPlanU6Hzb4p5R66GH-_PuuqCeuJsOS8pfQJWRNVIGoiDc98I_etA/exec?name=${formData.name}&phone=${formData.phone}&city=${formData.city}`,
-        {
-          method: "POST",
-          mode: "no-cors"
-        }
-      );
-
-      setShowSuccess(true);
-      setFormData({ name: "", phone: "", city: "" });
-    } catch (error) {
-      console.error("Error submitting form", error);
-      setShowSuccess(true);
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Redirect immediately
+    window.location.href = "/thank-you";
   };
 
   return (
@@ -232,28 +225,6 @@ export default function Home() {
               </button>
             </form>
 
-            {/* Success Message */}
-            {showSuccess && (
-              <div className="mt-8 animate-fade-in-up">
-                <div className="bg-[#5a001a]/80 backdrop-blur-md border-2 border-yellow-500 rounded-2xl p-6 md:p-8 text-center shadow-2xl">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-yellow-500 rounded-full flex items-center justify-center shadow-lg">
-                    <svg className="w-9 h-9 text-[#5a001a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl md:text-3xl font-black text-yellow-400 mb-3 drop-shadow-md">
-                    تم تسجيل طلبك بنجاح!
-                  </h3>
-                  <p className="text-white text-lg md:text-xl font-bold opacity-90 leading-relaxed">
-                    سنتصل بك قريباً لتأكيد الطلب
-                  </p>
-                  <div className="mt-4 flex items-center justify-center gap-2 text-yellow-300 text-sm font-semibold">
-                    <span className="text-lg">📞</span>
-                    <span>فريقنا سيتواصل معك في أقرب وقت</span>
-                  </div>
-                </div>
-              </div>
-            )}
           </div>
         </section>
       </main>
