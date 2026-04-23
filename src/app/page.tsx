@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import { useState, useEffect, FormEvent } from "react";
+import { useRouter } from "next/navigation";
+
 
 export default function Home() {
-  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -13,6 +13,8 @@ export default function Home() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
+  const router = useRouter();
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,21 +33,30 @@ export default function Home() {
     document.getElementById("order-form")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Fire the request to Google Sheets (no need to wait)
-    fetch(
-      `https://script.google.com/macros/s/AKfycbw4r6M8JwNrIp1HtvPlanU6Hzb4p5R66GH-_PuuqCeuJsOS8pfQJWRNVIGoiDc98I_etA/exec?name=${encodeURIComponent(formData.name)}&phone=${encodeURIComponent(formData.phone)}&city=${encodeURIComponent(formData.city)}`,
-      {
-        method: "POST",
-        mode: "no-cors"
-      }
-    ).catch((error) => console.error("Error submitting form", error));
+    try {
 
-    // Redirect immediately
-    window.location.href = "/thank-you";
+
+      await fetch(
+        `https://script.google.com/macros/s/AKfycbw4r6M8JwNrIp1HtvPlanU6Hzb4p5R66GH-_PuuqCeuJsOS8pfQJWRNVIGoiDc98I_etA/exec?name=${formData.name}&phone=${formData.phone}&city=${formData.city}`,
+        {
+          method: "POST",
+          mode: "no-cors"
+        }
+      );
+
+      router.push("/thank-you");
+      setFormData({ name: "", phone: "", city: "" });
+
+    } catch (error) {
+      console.error("Error submitting form", error);
+      alert("حدث خطأ أثناء إرسال الطلب. يرجى المحاولة مرة أخرى.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -185,7 +196,7 @@ export default function Home() {
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-5 py-4 rounded-2xl border-2 border-transparent focus:border-yellow-400 focus:outline-none focus:ring-0 text-gray-900 text-xl font-medium bg-white shadow-inner transition-colors"
-                  placeholder="الاسم والنسب"
+                  placeholder="الاسم"
                 />
               </div>
 
@@ -224,7 +235,6 @@ export default function Home() {
                 {isSubmitting ? "جاري الإرسال..." : "اشتري الآن"}
               </button>
             </form>
-
           </div>
         </section>
       </main>
