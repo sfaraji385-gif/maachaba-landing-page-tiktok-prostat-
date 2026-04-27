@@ -65,7 +65,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b-2 shadow-sm border-gray-100 py-3 transition-all duration-300">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="شعار معشبة الحاج العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+            <Image src="/logo.webp" alt="شعار معشبة الحاج العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
             <h1 className="text-xl md:text-3xl font-black text-yellow-600 drop-shadow-sm tracking-tight">
               معشبة الحاج العروسي
             </h1>
@@ -87,7 +87,7 @@ export default function Home() {
         <section className="w-full pb-12">
           <div className="w-full flex flex-col items-center">
             <Image
-              src="/image 1+.png"
+              src="/image 1.webp"
               alt="العلاج الطبيعي للبروستاتا"
               width={1500}
               height={1500}
@@ -112,10 +112,10 @@ export default function Home() {
         {/* Persuasion Sections */}
         <section className="bg-white w-full">
           <div className="w-full flex md:max-w-4xl mx-auto flex-col items-center shadow-lg">
-            <Image src="/image 2.png" alt="تفاصيل المنتج" width={1000} height={1000} className="w-full h-auto object-cover block animate-fade-in-up" />
-            <Image src="/image 3.png" alt="فوائد المنتج" width={1000} height={1000} className="w-full h-auto object-cover block" />
-            <Image src="/image 4.png" alt="مكونات طبيعية" width={1000} height={1000} className="w-full h-auto object-cover block" />
-            <Image src="/image 5+.png" alt="آراء الزبائن" width={1000} height={1000} className="w-full h-auto object-cover block" />
+            <Image src="/image 2.webp" alt="تفاصيل المنتج" width={1000} height={1000} className="w-full h-auto object-cover block animate-fade-in-up" />
+            <Image src="/image 3.webp" alt="فوائد المنتج" width={1000} height={1000} className="w-full h-auto object-cover block" />
+            <Image src="/image 4.webp" alt="مكونات طبيعية" width={1000} height={1000} className="w-full h-auto object-cover block" />
+            <Image src="/image 5.webp" alt="آراء الزبائن" width={1000} height={1000} className="w-full h-auto object-cover block" />
           </div>
         </section>
 
@@ -174,7 +174,7 @@ export default function Home() {
           {/* Background Image with Overlay */}
           <div
             className="absolute inset-0 z-0 opacity-25 bg-cover bg-center bg-fixed"
-            style={{ backgroundImage: "url('/backrond.png')" }}
+            style={{ backgroundImage: "url('/backrond.webp')" }}
           />
           <div className="absolute inset-0 z-0 bg-gradient-to-t from-maroon-900 via-transparent to-maroon-800 opacity-90 mix-blend-multiply" />
 
@@ -234,6 +234,17 @@ export default function Home() {
               >
                 {isSubmitting ? "جاري الإرسال..." : "اشتري الآن"}
               </button>
+
+              <p className="text-center text-white font-bold text-xl mt-4 mb-1 opacity-80">أو</p>
+
+              <a
+                href="https://wa.me/212625384599"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 bg-[#25D366] border-b-4 border-[#1da851] hover:bg-[#1ebe5d] text-white font-black text-3xl py-5 rounded-2xl shadow-xl transition-all animate-heartbeat active:translate-y-1 active:border-b-0 text-center block"
+              >
+                اطلب عبر الواتساب
+              </a>
             </form>
           </div>
         </section>
@@ -249,8 +260,8 @@ export default function Home() {
 
           <div className="bg-[#1a1a1a] p-5 rounded-xl border border-gray-800 max-w-2xl shadow-inner mb-8">
             <p className="text-sm md:text-base leading-relaxed text-gray-400 font-medium tracking-wide">
-              <strong className="text-yellow-600 block mb-1">تنويه طبي هام</strong>
-              هذا المنتج هو مكمل طبيعي. النتائج قد تختلف من شخص لآخر وليس بديلا عن الاستشارة الطبية. يجب استشارة طبيبك قبل استخدامه إذا كنت تعاني من أي أمراض مزمنة.
+              <strong className="text-yellow-600 block mb-1">🩺 معلومة تهم سلامتك:</strong>
+              نحن نهتم بصحتك أولاً! لأن أجسامنا تختلف، نوفر لك استشارة مجانية فور طلبك للمنتج، لنضمن لك أنه المناسب تماماً لحالتك الصحية قبل البدء. هذا المكمل طبيعي 100% ونتائجه تتفاوت بشكل إيجابي من شخص لآخر، وفريقنا معك خطوة بخطوة لضمان أفضل تجربة.
             </p>
           </div>
 
