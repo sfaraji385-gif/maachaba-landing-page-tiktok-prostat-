@@ -23,7 +23,7 @@ export default function ThankYou() {
       <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b-2 shadow-sm border-gray-100 py-3 transition-all duration-300">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/logo.png" alt="شعار معشبة الحاج العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+            <Image src="/logo.webp" alt="شعار معشبة الحاج العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
             <h1 className="text-xl md:text-3xl font-black text-yellow-600 drop-shadow-sm tracking-tight">
               معشبة الحاج العروسي
             </h1>
@@ -36,7 +36,7 @@ export default function ThankYou() {
         {/* Background */}
         <div
           className="absolute inset-0 z-0 opacity-20 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('/backrond.png')" }}
+          style={{ backgroundImage: "url('/backrond.webp')" }}
         />
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#5a001a] via-[#5a001a]/95 to-[#3a0010]" />
 
