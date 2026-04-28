@@ -13,6 +13,7 @@ export default function Home() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
+  const [isFormVisible, setIsFormVisible] = useState(false);
   const router = useRouter();
 
 
@@ -26,7 +27,27 @@ export default function Home() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    // Observe the order form section
+    const formSection = document.getElementById("order-form");
+    let observer: IntersectionObserver | null = null;
+
+    if (formSection) {
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          setIsFormVisible(entry.isIntersecting);
+        },
+        { threshold: 0.1 }
+      );
+      observer.observe(formSection);
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (observer && formSection) {
+        observer.unobserve(formSection);
+      }
+    };
   }, []);
 
   const handleScrollToForm = () => {
@@ -275,7 +296,7 @@ export default function Home() {
 
       {/* Floating Sticky CTA */}
       <div
-        className={`fixed bottom-6 left-6 z-50 transition-all duration-500 transform ${showFloatingCTA ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0 pointer-events-none'}`}
+        className={`fixed bottom-6 left-6 z-50 transition-all duration-500 transform ${showFloatingCTA && !isFormVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0 pointer-events-none'}`}
       >
         <button
           onClick={handleScrollToForm}
