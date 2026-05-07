@@ -36,7 +36,7 @@ export default function ThankYou() {
         {/* Background */}
         <div
           className="absolute inset-0 z-0 opacity-20 bg-cover bg-center bg-fixed"
-          style={{ backgroundImage: "url('/backrond.webp')" }}
+          style={{ backgroundImage: "url('/background.webp')" }}
         />
         <div className="absolute inset-0 z-0 bg-gradient-to-b from-[#5a001a] via-[#5a001a]/95 to-[#3a0010]" />
 

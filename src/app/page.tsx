@@ -195,7 +195,7 @@ export default function Home() {
           {/* Background Image with Overlay */}
           <div
             className="absolute inset-0 z-0 opacity-25 bg-cover bg-center bg-fixed"
-            style={{ backgroundImage: "url('/backrond.webp')" }}
+            style={{ backgroundImage: "url('/background.webp')" }}
           />
           <div className="absolute inset-0 z-0 bg-gradient-to-t from-maroon-900 via-transparent to-maroon-800 opacity-90 mix-blend-multiply" />
 
@@ -275,8 +275,8 @@ export default function Home() {
       <footer className="bg-[#111111] text-gray-400 pt-12 pb-8 border-t-[6px] border-maroon-800 relative z-10 w-full">
         <div className="max-w-4xl mx-auto px-4 text-center flex flex-col items-center">
           <div className="mb-8 flex justify-center gap-8 font-semibold">
-            <a href="#" className="hover:text-yellow-500 transition-colors">سياسة الخصوصية</a>
-            <a href="#" className="hover:text-yellow-500 transition-colors">شروط الاستخدام</a>
+            <a href="/privacy" className="hover:text-yellow-500 transition-colors">سياسة الخصوصية</a>
+            <a href="/terms" className="hover:text-yellow-500 transition-colors">شروط الاستخدام</a>
           </div>
 
           <div className="bg-[#1a1a1a] p-5 rounded-xl border border-gray-800 max-w-2xl shadow-inner mb-8">
