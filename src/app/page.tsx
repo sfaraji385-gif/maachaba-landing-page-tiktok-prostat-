@@ -86,9 +86,9 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b-2 shadow-sm border-gray-100 py-3 transition-all duration-300">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/logo.webp" alt="شعار معشبة الحاج العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+            <Image src="/logo.webp" alt="شعار معشبة العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
             <h1 className="text-xl md:text-3xl font-black text-yellow-600 drop-shadow-sm tracking-tight">
-              معشبة الحاج العروسي
+              معشبة العروسي
             </h1>
           </div>
           <div>
@@ -109,7 +109,7 @@ export default function Home() {
           <div className="w-full flex flex-col items-center">
             <Image
               src="/image 1.webp"
-              alt="العلاج الطبيعي للبروستاتا"
+              alt="استرجع طاقتك وحيويتك مع الباك الطبيعي"
               width={1500}
               height={1500}
               className="w-full h-auto block m-0 p-0"
@@ -121,7 +121,7 @@ export default function Home() {
                 onClick={handleScrollToForm}
                 className="animate-heartbeat bg-red-600 border-b-[6px] border-red-800 hover:bg-red-700 text-white font-black text-3xl md:text-5xl py-5 px-16 rounded-[40px] shadow-2xl transition-all focus:outline-none focus:ring-4 focus:ring-red-300"
               >
-                اشتري الآن
+                اطلب الباك الآن
               </button>
               <p className="mt-4 text-sm font-semibold text-gray-500 uppercase tracking-widest hidden md:block">
                 الكمية محدودة جداً
@@ -133,9 +133,9 @@ export default function Home() {
         {/* Persuasion Sections */}
         <section className="bg-white w-full">
           <div className="w-full flex md:max-w-4xl mx-auto flex-col items-center shadow-lg">
-            <Image src="/image 2.webp" alt="تفاصيل المنتج" width={1000} height={1000} className="w-full h-auto object-cover block animate-fade-in-up" />
-            <Image src="/image 3.webp" alt="فوائد المنتج" width={1000} height={1000} className="w-full h-auto object-cover block" />
-            <Image src="/image 4.webp" alt="مكونات طبيعية" width={1000} height={1000} className="w-full h-auto object-cover block" />
+            <Image src="/image 2.webp" alt="تفاصيل الباك الطبيعي" width={1000} height={1000} className="w-full h-auto object-cover block animate-fade-in-up" />
+            <Image src="/image 3.webp" alt="فوائد الباك الطبيعي" width={1000} height={1000} className="w-full h-auto object-cover block" />
+            <Image src="/image 4.webp" alt="مكونات طبيعية 100%" width={1000} height={1000} className="w-full h-auto object-cover block" />
             <Image src="/image 5.webp" alt="آراء الزبائن" width={1000} height={1000} className="w-full h-auto object-cover block" />
           </div>
         </section>
@@ -145,29 +145,29 @@ export default function Home() {
           <div className="max-w-3xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl transform transition-transform hover:scale-[1.02]">
             <div className="bg-yellow-500 py-3 text-center">
               <span className="font-extrabold text-[#5a001a] text-xl md:text-2xl tracking-widest uppercase">
-                عرض حصري
+                عرض حصري ومحدود
               </span>
             </div>
             <div className="p-8 md:p-10 flex flex-col items-center text-center">
               <h2 className="text-3xl md:text-5xl font-black text-yellow-600 mb-6 drop-shadow-sm">
-                باقة البروستات المتكاملة
+                الباك الطبيعي للطاقة والحيوية
               </h2>
               <p className="text-lg md:text-2xl text-gray-800 font-bold mb-6 leading-relaxed max-w-2xl px-2">
-                الحل الطبيعي والفعال لمشاكل البروستات. تحتوي الباقة على:
+                استرجع طاقتك وحيويتك مع تركيبة ثلاثية طبيعية مضمونة:
               </p>
 
               <ul className="w-full max-w-2xl flex flex-col gap-4 mb-10 px-2 text-right">
                 <li className="flex items-center gap-5 bg-[#5a001a]/70 p-4 md:p-5 rounded-xl border border-yellow-500 shadow-lg transition hover:scale-[1.02]">
                   <span className="text-5xl md:text-6xl shrink-0 drop-shadow-md">🍯</span>
-                  <span className="text-white font-bold text-lg md:text-xl leading-relaxed">نصف كيلو من العسل الحر بالأعشاب الطبيعية</span>
+                  <span className="text-white font-bold text-lg md:text-xl leading-relaxed">عسل حر بالأعشاب الطبيعية المنشطة</span>
                 </li>
                 <li className="flex items-center gap-5 bg-[#5a001a]/70 p-4 md:p-5 rounded-xl border border-yellow-500 shadow-lg transition hover:scale-[1.02]">
                   <span className="text-5xl md:text-6xl shrink-0 drop-shadow-md">🧴</span>
-                  <span className="text-white font-bold text-lg md:text-xl leading-relaxed">زيت للدهن لتنشيط الأوعية الدموية</span>
+                  <span className="text-white font-bold text-lg md:text-xl leading-relaxed">زيت التنشيط لتحفيز الدورة الدموية</span>
                 </li>
                 <li className="flex items-center gap-5 bg-[#5a001a]/70 p-4 md:p-5 rounded-xl border border-yellow-500 shadow-lg transition hover:scale-[1.02]">
                   <span className="text-5xl md:text-6xl shrink-0 drop-shadow-md">🍵</span>
-                  <span className="text-white font-bold text-lg md:text-xl leading-relaxed">منقوع خاص لتنقية المثانة</span>
+                  <span className="text-white font-bold text-lg md:text-xl leading-relaxed">منقوع التنقية لتصفية الجسم من السموم</span>
                 </li>
               </ul>
 
@@ -204,7 +204,7 @@ export default function Home() {
               أدخل معلوماتك للطلب
             </h2>
             <p className="text-white text-center mb-10 font-bold text-lg opacity-90">
-              الدفع عند الاستلام والتوصيل مجاني
+              الدفع عند الاستلام والتوصيل مجاني لجميع المدن
             </p>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
@@ -253,7 +253,7 @@ export default function Home() {
                 disabled={isSubmitting}
                 className={`mt-4 bg-red-600 border-b-4 border-red-800 hover:bg-red-700 text-white font-black text-3xl py-5 rounded-2xl shadow-xl transition-all ${isSubmitting ? 'opacity-75 cursor-not-allowed transform-none' : 'animate-heartbeat active:translate-y-1 active:border-b-0'}`}
               >
-                {isSubmitting ? "جاري الإرسال..." : "اشتري الآن"}
+                {isSubmitting ? "جاري الإرسال..." : "اطلب الباك الآن"}
               </button>
 
               <p className="text-center text-white font-bold text-xl mt-4 mb-1 opacity-80">أو</p>
@@ -281,15 +281,15 @@ export default function Home() {
 
           <div className="bg-[#1a1a1a] p-5 rounded-xl border border-gray-800 max-w-2xl shadow-inner mb-8">
             <p className="text-sm md:text-base leading-relaxed text-gray-400 font-medium tracking-wide">
-              <strong className="text-yellow-600 block mb-1">🩺 معلومة تهم سلامتك:</strong>
-              نحن نهتم بصحتك أولاً! لأن أجسامنا تختلف، نوفر لك استشارة مجانية فور طلبك للمنتج، لنضمن لك أنه المناسب تماماً لحالتك الصحية قبل البدء. هذا المكمل طبيعي 100% ونتائجه تتفاوت بشكل إيجابي من شخص لآخر، وفريقنا معك خطوة بخطوة لضمان أفضل تجربة.
+              <strong className="text-yellow-600 block mb-1">🌿 منتج طبيعي 100%:</strong>
+              كل مكون تدرس بعناية باش يمنحك الراحة لي كتقلب عليها، بعيداً على أي مواد كيماوية. نتائج المنتج تتفاوت بشكل إيجابي من شخص لآخر، وفريقنا معك خطوة بخطوة لضمان أفضل تجربة. نوفر لك استشارة مجانية فور طلبك.
             </p>
           </div>
 
           <div className="h-[1px] w-full max-w-md bg-gray-800 mb-6"></div>
 
           <p className="text-sm font-medium tracking-wide">
-            &copy; {new Date().getFullYear()} <span className="text-yellow-600">معشبة الحاج العروسي</span>. جميع الحقوق محفوظة.
+            &copy; {new Date().getFullYear()} <span className="text-yellow-600">معشبة العروسي</span>. جميع الحقوق محفوظة.
           </p>
         </div>
       </footer>

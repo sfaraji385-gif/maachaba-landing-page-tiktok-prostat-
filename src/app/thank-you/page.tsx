@@ -23,9 +23,9 @@ export default function ThankYou() {
       <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b-2 shadow-sm border-gray-100 py-3 transition-all duration-300">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Image src="/logo.webp" alt="شعار معشبة الحاج العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+            <Image src="/logo.webp" alt="شعار معشبة العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
             <h1 className="text-xl md:text-3xl font-black text-yellow-600 drop-shadow-sm tracking-tight">
-              معشبة الحاج العروسي
+              معشبة العروسي
             </h1>
           </div>
         </div>
@@ -96,7 +96,7 @@ export default function ThankYou() {
       <footer className="bg-[#111111] text-gray-400 pt-8 pb-6 border-t-[6px] border-maroon-800 relative z-10 w-full">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-sm font-medium tracking-wide">
-            &copy; {new Date().getFullYear()} <span className="text-yellow-600">معشبة الحاج العروسي</span>. جميع الحقوق محفوظة.
+            &copy; {new Date().getFullYear()} <span className="text-yellow-600">معشبة العروسي</span>. جميع الحقوق محفوظة.
           </p>
         </div>
       </footer>

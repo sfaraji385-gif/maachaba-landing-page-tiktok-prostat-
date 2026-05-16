@@ -3,8 +3,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "شروط الاستخدام - معشبة الحاج العروسي",
-  description: "شروط الاستخدام الخاصة بموقع معشبة الحاج العروسي",
+  title: "شروط الاستخدام - معشبة العروسي",
+  description: "شروط الاستخدام الخاصة بموقع معشبة العروسي",
 };
 
 export default function Terms() {
@@ -14,9 +14,9 @@ export default function Terms() {
       <header className="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b-2 shadow-sm border-gray-100 py-3 transition-all duration-300">
         <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <Image src="/logo.webp" alt="شعار معشبة الحاج العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
+            <Image src="/logo.webp" alt="شعار معشبة العروسي" width={60} height={60} className="w-12 h-12 md:w-16 md:h-16 object-contain" />
             <h1 className="text-xl md:text-3xl font-black text-yellow-600 drop-shadow-sm tracking-tight">
-              معشبة الحاج العروسي
+              معشبة العروسي
             </h1>
           </Link>
         </div>
@@ -33,7 +33,7 @@ export default function Terms() {
             <section>
               <h3 className="text-xl font-bold text-yellow-600 mb-3">القبول بالشروط</h3>
               <p>
-                باستخدامك لموقع معشبة الحاج العروسي، فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على أي من هذه الشروط، يرجى عدم استخدام الموقع.
+                باستخدامك لموقع معشبة العروسي، فإنك توافق على الالتزام بهذه الشروط والأحكام. إذا كنت لا توافق على أي من هذه الشروط، يرجى عدم استخدام الموقع.
               </p>
             </section>
 
@@ -71,7 +71,7 @@ export default function Terms() {
             <section>
               <h3 className="text-xl font-bold text-yellow-600 mb-3">الملكية الفكرية</h3>
               <p>
-                جميع المحتويات على هذا الموقع، بما في ذلك النصوص والصور والشعارات والتصاميم، هي ملكية حصرية لمعشبة الحاج العروسي. يُمنع نسخها أو إعادة استخدامها دون إذن كتابي مسبق.
+                جميع المحتويات على هذا الموقع، بما في ذلك النصوص والصور والشعارات والتصاميم، هي ملكية حصرية لمعشبة العروسي. يُمنع نسخها أو إعادة استخدامها دون إذن كتابي مسبق.
               </p>
             </section>
 
@@ -100,7 +100,7 @@ export default function Terms() {
       <footer className="bg-[#111111] text-gray-400 pt-8 pb-6 border-t-[6px] border-maroon-800 relative z-10 w-full">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <p className="text-sm font-medium tracking-wide">
-            &copy; {new Date().getFullYear()} <span className="text-yellow-600">معشبة الحاج العروسي</span>. جميع الحقوق محفوظة.
+            &copy; {new Date().getFullYear()} <span className="text-yellow-600">معشبة العروسي</span>. جميع الحقوق محفوظة.
           </p>
         </div>
       </footer>
